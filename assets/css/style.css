@@ -1,0 +1,156 @@
+/* Beginner: My simple site styles */
+
+/* Color variables */
+:root {
+  --brand: #4f46e5;
+  --brand-2: #22c55e;
+  --text: #0f172a;
+}
+
+/* Smooth scrolling between anchors */
+html { scroll-behavior: smooth; }
+
+/* Basic text color */
+body { color: var(--text); }
+
+/* Clean white header */
+.header { background: #fff; }
+
+/* Small brand dot near site name */
+.brand-dot {
+  display: inline-block;
+  width: .65rem;
+  height: .65rem;
+  background: var(--brand);
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+/* ===== Navigation (CSS-only mobile menu) ===== */
+
+/* Hidden checkbox that controls mobile menu */
+.nav-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hamburger button (hidden on desktop, shown on small screens) */
+.nav-toggle-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #e2e8f0;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+/* Hamburger icon bars */
+.toggle-bar {
+  position: relative;
+  width: 18px;
+  height: 2px;
+  background: #0f172a;
+  display: block;
+}
+.toggle-bar::before,
+.toggle-bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: #0f172a;
+}
+.toggle-bar::before { top: -6px; }
+.toggle-bar::after  { top:  6px; }
+
+/* Links in a row on desktop */
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+  padding: .25rem .5rem;
+}
+.nav-link:hover,
+.nav-link:focus {
+  text-decoration: underline;
+}
+
+/* Mobile behavior: show hamburger, turn menu into dropdown */
+@media (max-width: 991.98px) {
+  .nav-toggle-btn { display: inline-flex; margin-left: .5rem; }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 64px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: .5rem;
+    padding: .75rem;
+    box-shadow: 0 10px 30px rgba(15,23,42,.06);
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 1000;
+  }
+  .nav-toggle:checked ~ .nav-menu { display: flex; }
+}
+
+/* ===== Sections / Components ===== */
+
+/* Big colorful header section (Home) */
+.banner {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #fff;
+}
+.lead-2 { font-size: 1.1rem; }
+
+/* Title strip area for pages */
+.page-head {
+  padding: 2.5rem 0;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Simple white card */
+.tile {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: .75rem;
+}
+
+/* Footer links */
+footer .nav-link { color: inherit; }
+footer .nav-link:hover { text-decoration: underline; }
+
+
+/* Simple custom button */
+.btn-custom {
+  background-color: #d7f1d7;  /* blue background */
+  padding: 10px 20px;         /* space inside */
+  border: none;               /* remove border */
+  border-radius: 10px;         /* rounded corners */
+  font-size: 16px;            /* normal text size */
+  cursor: pointer;            /* pointer cursor on hover */
+  margin-top: 10px;
+}
+
+/* When you hover */
+.btn-custom:hover {
+  background-color: #55b673;  /* darker blue */
+ 
+}
+
+.btn-custom a {
+    text-decoration: none;
+    color: #0f172a;
+}
+

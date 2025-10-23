@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!-- Beginner: This is my Home page with a profile picture in the hero -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <!-- I use Bootstrap CSS for easy layout and spacing -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- My small custom CSS file -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header shadow-sm">
+    <nav class="navbar container" aria-label="Primary">
+     
+      <a class="navbar-brand fw-semibold me-auto" href="index.html">Munia Mehraj</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+     
+      <label for="nav-toggle" class="nav-toggle-btn" aria-controls="navMenu">
+        <span class="toggle-bar"></span>
+      </label>
+
+      <div id="navMenu" class="nav-menu">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="portfolio.html">Portfolio</a>
+        <a class="nav-link" href="services.html">Service</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section-->
+    <section class="banner text-center text-light">
+      <div class="container">
+        <div class="d-flex justify-content-center mb-3">
+          <img
+            src="assets/img/profile-pic.jpg"
+            alt="Portrait of Munia Mehraj"
+            class="rounded-circle border border-3 border-light shadow"
+            width="140" height="140"
+            style="object-fit: cover;"
+          >
+        </div>
+
+        <h1 class="display-6 fw-semibold">Hi, I'm Munia</h1>
+        <p class="lead-2 opacity-75">
+          Beginner web developer learning HTML &amp; CSS. I like making simple, clean pages.
+        </p>
+
+        <div class="d-flex justify-content-center gap-2 mt-3">
+          <a class="btn btn-light btn-sm" href="portfolio.html">View Portfolio</a>
+          <a class="btn btn-outline-light btn-sm" href="contact.html">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Mission & Vision -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="h4 mb-4">My Career Mission &amp; Vision</h2>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="tile p-4 h-100">
+              <h3 class="h6">Mission</h3>
+              <p class="mb-0 small">Build useful and friendly websites that help people and small businesses.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="tile p-4 h-100">
+              <h3 class="h6">Vision</h3>
+              <p class="mb-0 small">Grow into a full-stack developer who cares about accessibility and performance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service list section-->
+    <section class="py-5 bg-body-tertiary">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h2 class="h4 mb-0">Services</h2>
+          <a href="services.html" class="btn btn-sm btn-outline-primary">All Services</a>
+        </div>
+        <div class="row g-3 row-cols-1 row-cols-md-3">
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h6">Static Website</h3>
+                <p class="small mb-0">Simple pages using HTML &amp; Bootstrap CSS.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h6">Portfolio Setup</h3>
+                <p class="small mb-0">Personal portfolio with projects and contact page.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h3 class="h6">Landing Page</h3>
+                <p class="small mb-0">Clean single-page layout for product or service info.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Feedback -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="h4 mb-4">Client Feedback</h2>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <figure class="tile p-4 h-100">
+              <blockquote class="blockquote">“Very polite and delivered a clean page.”</blockquote>
+              <figcaption class="blockquote-footer mb-0">Alex — Small Business</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <figure class="tile p-4 h-100">
+              <blockquote class="blockquote">“Understood instructions and kept things simple.”</blockquote>
+              <figcaption class="blockquote-footer mb-0">Nora — Freelancer</figcaption>
+            </figure>
+          </div>
+          <div class="col-md-4">
+            <figure class="tile p-4 h-100">
+              <blockquote class="blockquote">“Great communication and nice layout.”</blockquote>
+              <figcaption class="blockquote-footer mb-0">Sam — Store Owner</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 border-top mt-5">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <p class="mb-0 small">&copy; 2025 Munia Mehraj</p>
+      <ul class="nav small">
+        <li class="nav-item"><a href="about.html" class="nav-link px-2">About</a></li>
+        <li class="nav-item"><a href="portfolio.html" class="nav-link px-2">Portfolio</a></li>
+        <li class="nav-item"><a href="services.html" class="nav-link px-2">Service</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link px-2">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
